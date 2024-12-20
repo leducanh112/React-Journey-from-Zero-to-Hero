@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.section {
+  background-image: url("../Cau_11/background.jpg");
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-align: center;
+  width: 100%;
+}
+.box {
+  display: inline-block;
+  width: 260px;
+  color: #ffffff;
+  border-right: 1px solid #ffffff;
+}
+
+.box:last-child {
+  border: none;
+}
+
+.box h2 {
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.box p {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}

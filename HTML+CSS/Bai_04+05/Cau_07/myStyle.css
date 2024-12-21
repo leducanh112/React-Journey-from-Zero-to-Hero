@@ -1,0 +1,19 @@
+table th {
+  background-color: #ffab19;
+}
+table {
+  border-collapse: collapse;
+}
+table th,
+table td {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f6f6f6;
+}
+
+table tr:hover {
+  background-color: #ececec;
+}

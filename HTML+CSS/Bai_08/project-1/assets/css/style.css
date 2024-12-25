@@ -1,0 +1,15 @@
+/* Header */
+.header-top {
+  background-color: var(--color-one);
+  color: var(--color-two);
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+.header-main {
+  background-color: aqua;
+}
+.header-main .innner-wrap {
+  display: flex;
+}
+/* End Header */

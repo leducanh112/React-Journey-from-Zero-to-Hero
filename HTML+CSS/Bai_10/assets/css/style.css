@@ -1,0 +1,140 @@
+.section-one .inner-main {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.section-one .inner-head {
+  background: -webkit-linear-gradient(-30deg, #f57f20, #d62b08 100%);
+  text-align: center;
+  padding: 10px;
+}
+
+.section-one .inner-head .inner-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.section-one .inner-body {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.section-one .card-header {
+  background: #fff;
+  border: 0;
+  padding: 0;
+}
+.section-one .card {
+  border: 0;
+  margin-bottom: 5px;
+}
+.section-one .btn {
+  border: 1px solid transparent;
+  color: orange;
+  text-decoration: none;
+}
+
+.section-one .btn:focus {
+  box-shadow: none;
+}
+.section-one .btn.collapsed {
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+/* Section 2*/
+.section-two {
+  margin-top: 60px;
+}
+.section-two .inner-main {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.section-two .inner-head {
+  background: -webkit-linear-gradient(-30deg, #f57f20, #d62b08 100%);
+  text-align: center;
+  padding: 10px;
+}
+
+.section-two .inner-head .inner-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.section-two .inner-body {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.section-two .inner-head .inner-desc {
+  color: #fff;
+}
+.button {
+  background: -webkit-linear-gradient(-30deg, #f57f20, #d62b08 100%);
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 45px;
+  font-weight: 600;
+}
+
+.modal-form .modal-header {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-form .modal-header .close {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 32px;
+  height: 32px;
+  background: #000;
+  opacity: 1;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-form .modal-header .inner-image {
+  height: 40px;
+  width: auto;
+  margin-bottom: 6px;
+}
+.modal-form .modal-header .inner-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.modal-form .modal-header .inner-desc {
+  margin-bottom: 0px;
+}
+
+.modal-form .button {
+  width: 100%;
+}
+.modal-content {
+  border-radius: 10px;
+}
+
+.col-xl-20 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 1200px) {
+  .col-xl-20 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}

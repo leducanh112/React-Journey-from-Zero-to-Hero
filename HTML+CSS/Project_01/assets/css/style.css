@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+/* Header */
+.header {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.header .inner-wrap {
+  padding: 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--bg-1);
+  align-items: center;
+}
+
+/* Logo */
+.header .inner-wrap .inner-logo img {
+  height: 48px;
+  width: auto;
+  margin-right: 10px;
+}
+.header .inner-wrap .inner-logo a {
+  display: flex;
+  align-items: center;
+}
+.header .inner-wrap .inner-logo span {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+/* End Logo */
+
+/* Header menu */
+.header .inner-wrap .inner-menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.header .inner-wrap .inner-menu li a {
+  display: inline-block;
+  padding: 35px 20px;
+  color: var(--color-text);
+  font-size: 18px;
+}
+.header .inner-wrap .inner-menu li a:hover {
+  background: #fff;
+}
+/* End Header menu */
+
+/* Header social */
+.header .inner-wrap .inner-social ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.header .inner-wrap .inner-social ul li {
+  margin-left: 10px;
+}
+.header .inner-wrap .inner-social li a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 5px;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* End Header social */
+/* End Header */

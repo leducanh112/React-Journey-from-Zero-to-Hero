@@ -1,0 +1,38 @@
+/* Box Head */
+.box-head {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.box-head .inner-title {
+  font-weight: 700;
+  color: #124265;
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.box-head .inner-desc {
+  font-size: 16px;
+  color: #8a8a8a;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+/* End Box Head */
+
+/* Section One */
+.section-one .inner-main {
+  background: #f3f9fd;
+}
+.section-one .inner-info {
+  text-align: center;
+}
+.section-one .inner-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.section-one .inner-info .inner-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+/* End Section One */

@@ -21,6 +21,38 @@
 /* Section One */
 .section-one .inner-main {
   background: #f3f9fd;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+.section-one .inner-main::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f3f9fd;
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 20px);
+}
+.section-one .inner-content {
+  position: relative;
+  text-align: center;
+}
+.section-one .inner-main .inner-content::before {
+  content: "\f10d";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  color: #c9e3f5;
+  font-size: 20px;
+}
+.section-one .inner-main .inner-content::after {
+  content: "\f10e";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  color: #c9e3f5;
+  font-size: 20px;
 }
 .section-one .inner-info {
   text-align: center;
@@ -34,5 +66,16 @@
 .section-one .inner-info .inner-name {
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
+.section-one .inner-info .inner-position {
+  color: #8a8a8a;
+  margin-bottom: 0;
+}
+.section-one .inner-info {
+  text-align: center;
+  margin-top: 40px;
+}
+
 /* End Section One */

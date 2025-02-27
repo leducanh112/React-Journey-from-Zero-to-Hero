@@ -3,6 +3,22 @@ $color-green: #007200;
 $color-white: #fff;
 $color-gray: #424242;
 
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+@mixin flex-wrap() {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@mixin border-radius($value){
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    border-radius: $value;
+}
 // placeholder dung %
 %button {
     background: #c9c9c9;
@@ -27,14 +43,13 @@ $color-gray: #424242;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    @include display-flex;
     &__item { 
         margin: 0 30px;
     }
     &__link {
         text-decoration: none;
         color: $color-gray;
-
         &--active{
             color: $color-green;
         }
@@ -45,5 +60,33 @@ $color-gray: #424242;
         &:hover {
             color: $color-red;
         }
+    }
+}
+
+.pagination {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include display-flex;
+    @include flex-wrap;
+
+    &__item {
+        margin: 0 5px;
+        
+    } 
+    &__link {
+        color: $color-gray;
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid #ddd;
+        padding: 6px 10px;
+        @include border-radius(8px);
+    }
+    &__item--active &__link {
+        color: $color-red;
+    }
+    &__item--disabled &__link {
+        color: #ddd;
+        cursor: no-drop;
     }
 }

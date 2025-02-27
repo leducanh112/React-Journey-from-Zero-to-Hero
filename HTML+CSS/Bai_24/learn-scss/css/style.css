@@ -1,0 +1,43 @@
+.button--green, .button--red {
+  background: #c9c9c9;
+  color: #000;
+  border: 0;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.button--red {
+  background: #c00f0f;
+  color: #fff;
+}
+
+.button--green {
+  background: #007200;
+  color: #fff;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.nav__item {
+  margin: 0 30px;
+}
+.nav__link {
+  text-decoration: none;
+  color: #424242;
+}
+.nav__link--active {
+  color: #007200;
+}
+.nav__link--disabled {
+  color: #ddd;
+  cursor: no-drop;
+}
+.nav__link:hover {
+  color: #c00f0f;
+}
+
+/*# sourceMappingURL=style.css.map */

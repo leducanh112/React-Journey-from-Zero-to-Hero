@@ -1,0 +1,49 @@
+$color-red: #c00f0f;
+$color-green: #007200;
+$color-white: #fff;
+$color-gray: #424242;
+
+// placeholder dung %
+%button {
+    background: #c9c9c9;
+    color: #000;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+ 
+.button--red {
+    @extend %button;
+    background: $color-red;
+    color: $color-white;
+}
+.button--green  {
+    @extend %button;
+    background: $color-green;
+    color: $color-white;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    &__item { 
+        margin: 0 30px;
+    }
+    &__link {
+        text-decoration: none;
+        color: $color-gray;
+
+        &--active{
+            color: $color-green;
+        }
+        &--disabled {
+            color: #ddd;
+            cursor: no-drop;
+        }
+        &:hover {
+            color: $color-red;
+        }
+    }
+}

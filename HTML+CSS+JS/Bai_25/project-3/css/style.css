@@ -53,3 +53,19 @@
   font-weight: 600;
   color: green;
 }
+
+.pagination {
+  display: flex;
+}
+.pagination__button {
+  background: orange;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagination__number {
+  width: 40px;
+  text-align: center;
+  font-size: 24px;
+}

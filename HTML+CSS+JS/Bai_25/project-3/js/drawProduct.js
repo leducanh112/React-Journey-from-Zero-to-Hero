@@ -3,10 +3,14 @@ import { API_PRODUCT } from "./constants.js";
 import { params } from "./variable.js";
 
 const productItem = document.querySelector("#product");
+
 export const drawProduct = () => {
-  const api = `${API_PRODUCT}?q=${params.q}`;
+  let category = "";
+  if (params.category != "") {
+    category = `&category=${params.category.toLowerCase()}`;
+  }
+  const api = `${API_PRODUCT}?q=${params.q}&_sort=${params.sort}&_order=${params.order}&_page=${params.page}&_limit=${params.limit}${category}`;
   fetchApi(api).then((data) => {
-    console.log(data);
     let htmls = data.map((item) => {
       return `
                   <div class="product__item">

@@ -16,7 +16,20 @@
       <button>Search</button>
     </div>
 
+    <select name="" id="filter" class="filter">
+      <option value="mac-dinh">Mặc định</option>
+      <option value="gia-thap-den-cao">Giá thấp đến cao</option>
+      <option value="gia-cao-den-thap">Giá cao đến thấp</option>
+      <option value="giam-gia-nhieu">Giảm giá nhiều</option>
+    </select>
+
     <div id="product" class="product__list"></div>
+
+    <div class="pagination">
+      <span id="paginationPrev" class="pagination__button">Prev</span>
+      <span id="paginationNumber" class="pagination__number">1</span>
+      <span id="paginationNext" class="pagination__button">Next</span>
+    </div>
 
     <script type="module" src="js/category.js"></script>
     <script type="module" src="js/product.js"></script>

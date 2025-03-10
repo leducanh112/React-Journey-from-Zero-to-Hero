@@ -1,9 +1,10 @@
 import "./App.css";
-import Modal from "./components/Modal";
+import Tabs from "./components/Tabs";
+
 function App() {
   return (
     <>
-      <Modal></Modal>
+      <Tabs></Tabs>
     </>
   );
 }

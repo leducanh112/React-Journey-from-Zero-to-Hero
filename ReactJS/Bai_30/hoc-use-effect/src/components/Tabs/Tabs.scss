@@ -1,0 +1,14 @@
+.tabs {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+
+  &__item {
+    padding: 10px;
+    margin-right: 30px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

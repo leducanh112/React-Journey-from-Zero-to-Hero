@@ -1,19 +1,19 @@
 import Modal from "react-modal";
 import { useState, useEffect } from "react";
+import Swal from "sweetalert2";
+import { getListCategory } from "../../services/categoryService";
+import { editProduct } from "../../services/productsService";
 
-function CreateProduct(props) {
-  const { onReload } = props;
+function EditProduct(props) {
+  const { item, onReload } = props;
   const [showModel, setShowModel] = useState(false);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(item);
   const [dataCategory, setDataCategory] = useState([]);
 
   useEffect(() => {
     const fetchApi = async () => {
-      fetch("http://localhost:3000/categories")
-        .then((res) => res.json())
-        .then((data) => {
-          setDataCategory(data);
-        });
+      const result = await getListCategory();
+      setDataCategory(result);
     };
     fetchApi();
   }, []);
@@ -36,6 +36,7 @@ function CreateProduct(props) {
     });
   };
   function openModal() {
+    console.log(item);
     setShowModel(true);
   }
 
@@ -43,28 +44,25 @@ function CreateProduct(props) {
     setShowModel(false);
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/products", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data) {
-          setShowModel(false);
-          onReload();
-        }
+    const result = await editProduct(item.id, data);
+    if (result) {
+      setShowModel(false);
+      onReload();
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Edit Complete!",
+        showConfirmButton: false,
+        timer: 1500,
       });
+    }
   };
 
   return (
     <>
-      <button onClick={openModal}>Add</button>
+      <button onClick={openModal}>Edit</button>
       <Modal
         isOpen={showModel}
         onRequestClose={closeModal}
@@ -81,6 +79,7 @@ function CreateProduct(props) {
                     type="text"
                     name="title"
                     onChange={handleChange}
+                    value={data.title}
                   ></input>
                 </td>
               </tr>
@@ -88,7 +87,11 @@ function CreateProduct(props) {
                 <tr>
                   <td>Category</td>
                   <td>
-                    <select name="category" onChange={handleChange}>
+                    <select
+                      name="category"
+                      onChange={handleChange}
+                      value={data.category}
+                    >
                       {dataCategory.map((item, index) => {
                         return (
                           <option value={item.slug} key={index}>
@@ -108,6 +111,7 @@ function CreateProduct(props) {
                     type="text"
                     name="price"
                     onChange={handleChange}
+                    value={data.price}
                   ></input>
                 </td>
               </tr>
@@ -118,6 +122,7 @@ function CreateProduct(props) {
                     type="text"
                     name="discountPercentage"
                     onChange={handleChange}
+                    value={data.discountPercentage}
                   ></input>
                 </td>
               </tr>
@@ -128,6 +133,7 @@ function CreateProduct(props) {
                     type="text"
                     name="stock"
                     onChange={handleChange}
+                    value={data.stock}
                   ></input>
                 </td>
               </tr>
@@ -138,6 +144,7 @@ function CreateProduct(props) {
                     type="text"
                     name="thumbnail"
                     onChange={handleChange}
+                    value={data.thumbnail}
                   ></input>
                 </td>
               </tr>
@@ -148,6 +155,7 @@ function CreateProduct(props) {
                     rows={4}
                     name="description"
                     onChange={handleChange}
+                    value={data.description}
                   ></textarea>
                 </td>
               </tr>
@@ -167,4 +175,4 @@ function CreateProduct(props) {
   );
 }
 
-export default CreateProduct;
+export default EditProduct;

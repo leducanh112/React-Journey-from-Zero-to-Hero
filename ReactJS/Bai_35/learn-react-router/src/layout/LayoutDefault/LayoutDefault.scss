@@ -14,6 +14,7 @@
       display: flex;
       li {
         margin-left: 20px;
+        position: relative;
 
         a {
           color: #000;
@@ -35,5 +36,28 @@
     background: orange;
     text-align: center;
     padding: 10px 20px;
+  }
+}
+
+.menu {
+  &__sub {
+    position: absolute;
+    top: 100%;
+    background: orangered;
+    right: 0;
+    display: none !important;
+    flex-direction: column;
+
+    li {
+      margin-left: 0 !important ;
+    }
+    a {
+      white-space: nowrap;
+      display: block;
+      padding: 4px 10px;
+    }
+  }
+  li:hover > &__sub {
+    display: flex !important;
   }
 }

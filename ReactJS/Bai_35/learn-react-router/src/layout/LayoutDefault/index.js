@@ -19,6 +19,20 @@ function LayoutDefault() {
               </li>
               <li>
                 <NavLink to="/blog">Blog</NavLink>
+                <ul className="menu__sub">
+                  <li>
+                    <NavLink to="/blog/news">Blog News</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/blog/related">Blog Related</NavLink>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <NavLink to="/info-user">InfoUser</NavLink>
+              </li>
+              <li>
+                <NavLink to="/Login">Log In</NavLink>
               </li>
             </ul>
           </div>

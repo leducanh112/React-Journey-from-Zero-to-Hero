@@ -1,5 +1,11 @@
+import { Outlet } from "react-router-dom";
+
 function Blog() {
-  return <>Page Blog</>;
+  return (
+    <>
+      <Outlet></Outlet>
+    </>
+  );
 }
 
 export default Blog;

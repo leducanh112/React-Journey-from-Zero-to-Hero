@@ -1,13 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Button } from "antd";
+
+import { Grid } from "antd";
+import LearnButton from "./components/LearnButton";
+import LearnGrid from "./components/LearnGrid";
 
 function App() {
   return (
     <>
-      <Button type="primary" loading={false}>
-        Click
-      </Button>
+      <LearnGrid />
     </>
   );
 }

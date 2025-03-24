@@ -1,14 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
-
-import { Grid } from "antd";
-import LearnButton from "./components/LearnButton";
-import LearnGrid from "./components/LearnGrid";
+import AllRoutes from "./components/AllRoutes";
 
 function App() {
   return (
     <>
-      <LearnGrid />
+      <AllRoutes></AllRoutes>
     </>
   );
 }

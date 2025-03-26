@@ -1,0 +1,75 @@
+{
+  "book-room": [
+    {
+      "0": {
+        "time": "14:00"
+      },
+      "id": "135b",
+      "time": "14:00",
+      "fullName": "Duc Anh",
+      "phone": "0123456789",
+      "email": "duca1122001@gmail.com",
+      "services": [
+        "Thuê xe máy",
+        "Thuê ô tô 4 chỗ"
+      ],
+      "gift": "Áo thun",
+      "dates": [
+        "26-03-2025",
+        "27-04-2025"
+      ]
+    },
+    {
+      "0": {
+        "time": "14:00"
+      },
+      "id": "d428",
+      "time": "14:00",
+      "fullName": "Duc Anh",
+      "phone": "0123456789",
+      "email": "duca1122001@gmail.com",
+      "services": [
+        "Thuê ô tô 4 chỗ",
+        "Thuê ô tô 7 chỗ"
+      ],
+      "gift": "Áo thun",
+      "dates": [
+        "26-03-2025",
+        "27-04-2025"
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "id": "370c",
+      "name": "Room 01",
+      "quantityBed": 2,
+      "quantityPeople": 2,
+      "status": true
+    },
+    {
+      "id": "0917",
+      "name": "room 02",
+      "quantityBed": 1,
+      "quantityPeople": 2,
+      "status": true,
+      "typeRoom": false
+    },
+    {
+      "id": "466f",
+      "name": "Vip 01",
+      "quantityBed": 1,
+      "quantityPeople": 2,
+      "status": true,
+      "typeRoom": true
+    },
+    {
+      "id": "16f2",
+      "name": "Vip 02",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "status": true,
+      "typeRoom": true
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { Menu } from "antd";
-import { MailOutlined } from "@ant-design/icons";
+import { MailOutlined, PlusOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 function MenuSider() {
   const items = [
@@ -63,6 +63,16 @@ function MenuSider() {
     {
       label: <Link to="book-room">Book Room</Link>,
       key: "/book-room",
+    },
+    {
+      label: <Link to="create-room">Create Room</Link>,
+      icon: <PlusOutlined />,
+      key: "/create-room",
+    },
+    {
+      label: <Link to="list-room">List Room</Link>,
+      icon: <PlusOutlined />,
+      key: "/list-room",
     },
   ];
   return (

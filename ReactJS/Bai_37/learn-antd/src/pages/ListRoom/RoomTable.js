@@ -1,5 +1,6 @@
-import { Badge, Table } from "antd";
+import { Badge, Table, Tag, Tooltip } from "antd";
 import DeleteRoom from "./DeleteRoom";
+import EditRoom from "./EditRoom";
 
 function RoomTable(props) {
   const { rooms, onReload } = props;
@@ -24,13 +25,18 @@ function RoomTable(props) {
       dataIndex: "typeRoom",
       key: "typeRoom",
       render: (_, record) => {
-        console.log(record);
         return (
           <>
             {record.typeRoom ? (
-              <Badge color="purple" text="VIP"></Badge>
+              <>
+                <Tooltip title="Phòng VIP chuẩn 5 sao">
+                  <Tag color="purple">VIP</Tag>
+                </Tooltip>
+              </>
             ) : (
-              <Badge color="gray" text="Thường"></Badge>
+              <Tooltip title="Phòng thường chuẩn 3 sao">
+                <Tag color="gray">Thường</Tag>
+              </Tooltip>
             )}
           </>
         );
@@ -41,13 +47,12 @@ function RoomTable(props) {
       dataIndex: "status",
       key: "status",
       render: (_, record) => {
-        console.log(record);
         return (
           <>
             {record.status ? (
-              <Badge color="green" text="Còn phòng"></Badge>
+              <Tag color="green">Còn phòng</Tag>
             ) : (
-              <Badge color="red" text="Hết phòng"></Badge>
+              <Tag color="red">Hết phòng</Tag>
             )}
           </>
         );
@@ -57,10 +62,10 @@ function RoomTable(props) {
       title: "Hành Động",
       key: "actions",
       render: (_, record) => {
-        console.log(record);
         return (
           <>
             <DeleteRoom record={record} onReload={onReload}></DeleteRoom>
+            <EditRoom record={record} onReload={onReload}></EditRoom>
           </>
         );
       },

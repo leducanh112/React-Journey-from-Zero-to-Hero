@@ -36,4 +36,6 @@ export const patch = async (path, options) => {
     },
     body: JSON.stringify(options),
   });
+  const result = await response.json();
+  return result;
 };

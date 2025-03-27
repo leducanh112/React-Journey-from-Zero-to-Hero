@@ -42,10 +42,15 @@
   "rooms": [
     {
       "id": "370c",
-      "name": "Room 01",
+      "name": "Standard 03",
       "quantityBed": 2,
       "quantityPeople": 2,
-      "status": true
+      "status": true,
+      "typeRoom": false,
+      "description": "test",
+      "utils": [
+        "Nóng lạnh"
+      ]
     },
     {
       "id": "0917",
@@ -69,6 +74,25 @@
       "quantityBed": 2,
       "quantityPeople": 4,
       "status": true,
+      "typeRoom": true
+    },
+    {
+      "id": "5b0a",
+      "name": "test",
+      "quantityBed": 3,
+      "quantityPeople": 3,
+      "status": true
+    },
+    {
+      "id": "a0c2",
+      "name": "test 04",
+      "quantityBed": 3,
+      "quantityPeople": 6,
+      "utils": [
+        "Nóng lạnh",
+        "Wifi",
+        "Điều hòa"
+      ],
       "typeRoom": true
     }
   ]

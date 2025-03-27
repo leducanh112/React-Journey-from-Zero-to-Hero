@@ -1,26 +1,41 @@
-import { Button, Form, Input, InputNumber, Select, Switch } from "antd";
+import {
+  Button,
+  Form,
+  Input,
+  InputNumber,
+  Select,
+  Switch,
+  message,
+} from "antd";
 import FormItem from "antd/es/form/FormItem";
 import { createRoom } from "../../services/roomsService";
 
 const { Option } = Select;
 function CreateRoom() {
   const [form] = Form.useForm();
+  const [messageApi, contextHolder] = message.useMessage();
 
-  const handleSubmit = async (values) => {
-    const response = await createRoom(values);
-    console.log(response);
-    if (response) {
-      form.resetFields();
-    }
-  };
   const rules = [
     {
       required: true,
       message: "Bắt Buộc!",
     },
   ];
+
+  const handleSubmit = async (values) => {
+    const response = await createRoom(values);
+    if (response) {
+      form.resetFields();
+      messageApi.open({
+        type: "success",
+        content: "Tạo phòng mới thành công",
+      });
+    }
+  };
+
   return (
     <>
+      {contextHolder}
       <h2>Create New Room</h2>
       <Form
         layout="vertical"
